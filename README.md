@@ -1,4 +1,4 @@
-# Cinema-Management-System
+# Cinema-Management-System-C
 ## Summary
 Freshman curriculum design in C.
 
