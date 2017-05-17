@@ -7,7 +7,7 @@
 
 ## 截图
 
-<img src="http://o7gy5l0ax.bkt.clouddn.com/cinema1.jpeg" width = "640" height = "3766" alt="1" /><img src="http://o7gy5l0ax.bkt.clouddn.com/cinema2.jpeg" width = "640" height = "3766" alt="2" />
+<img src="http://o7gy5l0ax.bkt.clouddn.com/cinema1.jpeg" width = "320" height = "1883" alt="1" /><img src="http://o7gy5l0ax.bkt.clouddn.com/cinema2.jpeg" width = "320" height = "1883" alt="2" />
 
 ## 关于
 ### 组织
