@@ -7,7 +7,7 @@
 
 ## 截图
 
-<img src="http://o7gy5l0ax.bkt.clouddn.com/cinema1.jpeg" width = "320" height = "1883" alt="1" /><img src="http://o7gy5l0ax.bkt.clouddn.com/cinema2.jpeg" width = "320" height = "1883" alt="2" />
+<img src="https://github.com/1anc3r/Cinema-Management-System-C/blob/master/Screenshots/screenshot_0.gif" width = "466" height = "599" alt="1" />
 
 ## 关于
 ### 组织
