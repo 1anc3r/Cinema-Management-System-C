@@ -15,9 +15,9 @@ user *UserRead()
 	if((fp=fopen("data/infouser.txt","rb+"))==NULL)
 	{
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│       [!]提示:文件打开失败!      │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		getch();
 		exit(0);
 	}

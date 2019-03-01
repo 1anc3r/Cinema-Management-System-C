@@ -49,22 +49,22 @@ film *FilmEnter()
 		pnew->fare=0;
 		flag:
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│                            评分  │\n");
 		printf("│  片长：   分钟               元  │\n");
-		printf("│─────────────────│\n");
+		printf("│──────────────────────────────────│\n");
 		printf("│      年  月  日                  │\n");
-		printf("│─────────────────│\n");
+		printf("│──────────────────────────────────│\n");
 		printf("│                                  │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
     	/*********************片名*********************/
 		flagoffilmname:
 		Position(5,2);
 		printf("                      ");
 		Position(1,9);
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│        [!]提示:输入片名.[0<23]   │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		Position(5,2);
 		//scanf("%s",pnew->filmname);
 		i=0;
@@ -100,7 +100,7 @@ film *FilmEnter()
 		{
 			Position(1,10);
 			printf("│        [!]提示:错误格式!         │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			getch();
 			Position(5,2);
 			printf("                      ");
@@ -112,7 +112,7 @@ film *FilmEnter()
 		printf("   ");
 		Position(1,10);
 		printf("│        [!]提示:输入评分.[0<10]   │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		Position(28,2);
 		//scanf("%lf",&pnew->score);
 		i=0;
@@ -148,7 +148,7 @@ film *FilmEnter()
 		{
 			Position(1,10);
 			printf("│        [!]提示:错误格式!         │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			getch();
 			Position(28,2);
 			printf("   ");
@@ -160,7 +160,7 @@ film *FilmEnter()
 		printf("   ");
 		Position(1,10);
 		printf("│        [!]提示:输入片长.[0<1000] │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		Position(11,3);
 		//scanf("%lf",&pnew->length);
 		i=0;
@@ -196,7 +196,7 @@ film *FilmEnter()
 		{
 			Position(1,10);
 			printf("│        [!]提示:错误格式!         │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			getch();
 			Position(11,3);
 			printf("   ");
@@ -208,7 +208,7 @@ film *FilmEnter()
 		printf("      ");
 		Position(1,10);
 		printf("│        [!]提示:输入票价.[0<1000] │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		Position(27,3);
 		//scanf("%lf",&pnew->fare);
 		i=0;
@@ -244,7 +244,7 @@ film *FilmEnter()
 		{
 			Position(1,10);
 			printf("│        [!]提示:错误格式!         │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			getch();
 			Position(27,3);
 			printf("      ");
@@ -256,7 +256,7 @@ film *FilmEnter()
 		printf("    ");
 		Position(1,10);
 		printf("│        [!]提示:输入年份.[0<10000]│\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		Position(5,5);
 		//scanf("%d",&tempyear);
 		i=0;
@@ -292,7 +292,7 @@ film *FilmEnter()
 		{
 			Position(1,10);
 			printf("│        [!]提示:错误格式!         │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			getch();
 			Position(5,5);
 			printf("    ");
@@ -304,7 +304,7 @@ film *FilmEnter()
 		printf("  ");
 		Position(1,10);
 		printf("│        [!]提示:输入月份.[1~12]   │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		Position(11,5);
 		//scanf("%d",&tempmonth);
 		i=0;
@@ -340,7 +340,7 @@ film *FilmEnter()
 		{
 			Position(1,10);
 			printf("│        [!]提示:错误格式!         │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			getch();
 			Position(11,5);
 			printf("  ");
@@ -352,7 +352,7 @@ film *FilmEnter()
 		printf("  ");
 		Position(1,10);
 		printf("│        [!]提示:输入日期.[1~30]   │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		Position(15,5);
 		//scanf("%d",&tempday);
 		i=0;
@@ -388,7 +388,7 @@ film *FilmEnter()
 		{
 			Position(1,10);
 			printf("│        [!]提示:错误格式!         │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			getch();
 			Position(15,5);
 			printf("  ");
@@ -399,7 +399,7 @@ film *FilmEnter()
 		{
 			Position(1,10);
 			printf("│        [!]提示:未完成!           │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			getch();
 			goto flagofday;
 		}
@@ -413,41 +413,41 @@ film *FilmEnter()
 			qnew=(date*)malloc(sizeof(date));
 			Position(1,line);
 			printf("│    :  -  :                   厅  │\n");
-			printf("│─────────────────│\n");
+			printf("│──────────────────────────────────│\n");
 			printf("│                                  │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			qnew->year=tempyear;
 			qnew->month=tempmonth;
 			qnew->day=tempday;
 			Position(1,line+4);
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│        [!]提示:输入开幕时.[0<24] │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			Position(5,line);
 			scanf("%d",&qnew->openhour);
 			if(qnew->openhour<0||qnew->openhour>23)
 			{
 				Position(1,line+4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│        [!]提示:错误格式!         │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				Position(1,line);
 				printf("│    :  -  :                   厅  │\n");
 				goto flagofdate;
 			}
 			Position(1,line+4);
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│        [!]提示:输入开幕分.[0<60] │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			Position(8,line);
 			scanf("%d",&qnew->openmin);
 			if(qnew->openmin<0||qnew->openmin>59)
 			{
 				Position(1,line+4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│        [!]提示:错误格式!         │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				Position(1,line);
 				printf("│    :  -  :                   厅  │\n");
@@ -463,9 +463,9 @@ film *FilmEnter()
 			if(qnew->closehour>23)
 			{
 				Position(1,line+4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│        [!]提示:错误格式!         │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				Position(1,line);
 				printf("│    :  -  :                   厅  │\n");
@@ -478,9 +478,9 @@ film *FilmEnter()
 			Position(31,line);
 			scanf("%d",&qnew->hallnum);
 			Position(1,line+4);
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│        [!]提示:输入影厅号.[0<100]│\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			//影厅是否为空
 			tempopen=qnew->openhour*100+qnew->openmin;
 			tempclose=qnew->closehour*100+qnew->closemin;
@@ -492,9 +492,9 @@ film *FilmEnter()
 				if((qnew->year==hallall->year&&qnew->month==hallall->month&&qnew->day==hallall->day&&qnew->hallnum==hallall->hallnum)&&((tempopen>hallopen||tempopen<hallclose)||(tempclose>hallopen||tempclose<hallclose)))
 				{
 					Position(1,line+4);
-					printf("┌─────────────────┐\n");
+					printf("┌──────────────────────────────────┐\n");
 					printf("│        [!]提示:场次已存在!       │\n");
-					printf("└─────────────────┘\n");
+					printf("└──────────────────────────────────┘\n");
 					getch();
 					Position(1,line);
 					printf("│    :  -  :                   厅  │\n");
@@ -505,9 +505,9 @@ film *FilmEnter()
 			if(qnew->hallnum<1||qnew->hallnum>99)
 			{
 				Position(1,line+4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│        [!]提示:错误格式!         │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				goto flagofdate;
@@ -536,10 +536,10 @@ film *FilmEnter()
 			qend=qnew;
 			line+=2;
 			Position(1,line+2);
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│      是否继续录入场次信息?       │\n");
-			printf("│      ○ 继续      ○ 结束        │\n");
-			printf("└─────────────────┘\n");
+			printf("│       ○ 继续      ○ 结束         │\n");
+			printf("└──────────────────────────────────┘\n");
 				//scanf("%d",&k2);
 			k2=9;
 			Position(k2,line+4);
@@ -584,10 +584,10 @@ film *FilmEnter()
 		pend->next=pnew;
 		pend=pnew;
 		Position(1,line+2);
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│      是否继续录入影片信息?       │\n");
-		printf("│      ○ 继续      ○ 结束        │\n");
-		printf("└─────────────────┘\n");
+		printf("│      ○ 继续      ○ 结束          │\n");
+		printf("└──────────────────────────────────┘\n");
 		k1=9;
 		Position(k1,line+4);
 		printf("●");
@@ -631,10 +631,10 @@ film *FilmEnter()
 	pend->next=NULL;
 	n=u;
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│    [!]提示:录入%3d个影片信息!    │\n",u);
 	printf("│        任意键返回主菜单...       │\n");
-	printf("└─────────────────┘\n");
+	printf("└──────────────────────────────────┘\n");
 	getch();
 	system("cls");
 	return phead;

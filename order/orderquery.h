@@ -23,23 +23,23 @@ order* OrderQuery(order *p)
 	{
 		line=5;
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│           查询订单信息           │\n");
-		printf("│─────────────────│\n");
+		printf("│──────────────────────────────────│\n");
 		printf("│                                  │\n");
 		printf("│           [1]-----订单号         │\n");
 		printf("│                                  │\n");
 		printf("│           [0]-----取消           │\n");
 		printf("│                                  │\n");
-		printf("└─────────────────┘\n");
-		choose=Cursor(5,7,12,26,7,2);
+		printf("└──────────────────────────────────┘\n");
+		choose=Cursor(5,7,11,25,7,2);
 		system("cls");
 		switch(choose)
 		{
 			case 5 :
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│  订单号:                         │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			Position(12,2);
 			scanf("%s",tempnum);
 			num=strlen(tempnum);
@@ -51,12 +51,12 @@ order* OrderQuery(order *p)
 			if(!memcmp(tempnum,strnum,num))
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│             订单信息             │\n");
-				printf("│─────────────────│\n");
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  订单：                 %7d  │\n",q->ordernum);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  片名:");
 				len=strlen(q->filmname);
 				for(i = 0;i < 25-len;i++)
@@ -64,21 +64,21 @@ order* OrderQuery(order *p)
 					printf(" ");
 				}
 				printf("%s  │\n",q->filmname);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  片长：                 %3.lf分钟  │\n",q->length);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  日期:           %4d年%2d月%2d日  │\n",q->year,q->month,q->day);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  场次:              %2d:%2d-%2d:%2d  │\n",q->openhour,q->openmin,q->closehour,q->closemin);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  院厅:                     %2d厅  │\n",q->hallnum);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  座位:                 %2d排%2d座  │\n",q->shit[0],q->shit[1]);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  小计:                 %6.2lf元  │\n",q->fare);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│                                  │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return q;
@@ -86,9 +86,9 @@ order* OrderQuery(order *p)
 			else
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│ [!]提示:无该订单记录,请输入数据! │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return NULL;
@@ -102,19 +102,19 @@ order* OrderQuery(order *p)
 	else
 	{
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│  [!]提示:无订单数据,请输入数据!  │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		getch();
 		system("cls");
 		return NULL;
 	}
 	flag:
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│       [!]提示:查询完毕!          │\n");
 	printf("│       任意键返回主菜单...        │\n");
-	printf("└─────────────────┘\n");
+	printf("└──────────────────────────────────┘\n");
 	getch();
 	system("cls");
 	return NULL;

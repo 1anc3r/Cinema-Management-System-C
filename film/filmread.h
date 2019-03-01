@@ -29,9 +29,9 @@ film* FilmRead()
 	if((fp=fopen("data/infofilm.txt","rt+"))==NULL)
 	{
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│       [!]提示:文件打开失败!      │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		getch();
 		exit(0);
 	}

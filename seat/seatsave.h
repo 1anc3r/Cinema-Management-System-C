@@ -17,9 +17,9 @@ ss SeatSave(int seat[][14],char filename[23])
 	if((fp=fopen(tmpstr,"wt+"))==NULL)
 	{
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│       [!]提示:文件打开失败!      │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		getch();
 		exit(0);
 	}

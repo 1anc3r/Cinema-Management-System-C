@@ -18,16 +18,16 @@ user *UserSort(user *p)
     {
         line=5;
         system("cls");
-        printf("┌─────────────────┐\n");
+        printf("┌──────────────────────────────────┐\n");
         printf("│           排序用户信息           │\n");
-        printf("│─────────────────│\n");
+        printf("│──────────────────────────────────│\n");
         printf("│                                  │\n");
         printf("│           [1]-----权限           │\n");
         printf("│           [2]-----账号           │\n");
         printf("│           [0]-----取消           │\n");
         printf("│                                  │\n");
-        printf("└─────────────────┘\n");
-        choose=Cursor(5,7,12,26,7,1);
+        printf("└──────────────────────────────────┘\n");
+        choose=Cursor(5,7,11,25,7,1);
         post=(user*)malloc(sizeof(user));
         post->next=p;
         card=post;
@@ -62,9 +62,9 @@ user *UserSort(user *p)
     }
     else
     {
-        printf("┌─────────────────┐\n");
+        printf("┌──────────────────────────────────┐\n");
         printf("│  [!]提示:无用户数据,请输入数据!  │\n");
-        printf("└─────────────────┘\n");
+        printf("└──────────────────────────────────┘\n");
     }
     getch();
     system("cls");

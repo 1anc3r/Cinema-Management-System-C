@@ -18,23 +18,23 @@ int Register()
 	user *phead,*pend,*pnew;
 	line=9;
 	system("cls");
-	printf("┌─────────────────┐\n");
-	printf("│┌───────────────┐│\n");
-	printf("││    	注册		  ││\n");
-	printf("│└───────────────┘│\n");
-	printf("│┌───────────────┐│\n");
+	printf("┌────────────────────────────────┐\n");
+	printf("│┌──────────────────────────────┐│\n");
+	printf("││             注册             ││\n");
+	printf("│└──────────────────────────────┘│\n");
+	printf("│┌──────────────────────────────┐│\n");
 	printf("││                              ││\n");
-	printf("││   ┌──────────┐   ││\n");
-	printf("││   │ 请选择权限:        │   ││\n");
-	printf("││   │ [1]---售票员       │   ││\n");
-	printf("││   │ [2]---经理         │   ││\n");
-	printf("││   │ [3]---管理         │   ││\n");
-	printf("││   │                    │   ││\n");
-	printf("││   └──────────┘   ││\n");
+	printf("││   ┌──────────────────────┐   ││\n");
+	printf("││   │ 请选择权限:          │   ││\n");
+	printf("││   │ [1]---售票员         │   ││\n");
+	printf("││   │ [2]---经理           │   ││\n");
+	printf("││   │ [3]---管理           │   ││\n");
+	printf("││   │                      │   ││\n");
+	printf("││   └──────────────────────┘   ││\n");
 	printf("││                              ││\n");
-	printf("│└───────────────┘│\n");
-	printf("└─────────────────┘\n");
-	Position(10,line);
+	printf("│└──────────────────────────────┘│\n");
+	printf("└────────────────────────────────┘\n");
+	Position(7,line);
 	printf(">");
 	while((ch=getch())!=0x0d)
 	{
@@ -46,10 +46,10 @@ int Register()
 			}
 			else
 			{
-				Position(10,line);
+				Position(7,line);
 				printf(" ");
 				line--;
-				Position(10,line);
+				Position(7,line);
 				printf(">");
 				break;
 			}
@@ -62,10 +62,10 @@ int Register()
 			}
 			else
 			{
-				Position(10,line);
+				Position(7,line);
 				printf(" ");
 				line++;
-				Position(10,line);
+				Position(7,line);
 				printf(">");
 				break;
 			}
@@ -73,30 +73,30 @@ int Register()
 	}
 	tempower=line-8;
 	Position(1,9);
-	printf("├┴───────────────┴┤\n");
-	printf("│  验证码:                         │\n");
-	printf("├┬───────────────┬┤\n");
+	printf("├┴──────────────────────────────┴┤\n");
+	printf("│  验证码:                       │\n");
+	printf("├┬──────────────────────────────┬┤\n");
 	Position(12,10);
 	scanf("%s",pin);
 	if((tempower==1&&strcmp(pin,"ticket")==0)||(tempower==2&&strcmp(pin,"manage")==0)||(tempower==3&&strcmp(pin,"admin")==0))
 	{
 		system("cls");
-		printf("┌─────────────────┐\n");
-		printf("│┌───────────────┐│\n");
-		printf("││    	注册		  ││\n");
-		printf("│└───────────────┘│\n");
-		printf("│┌───────────────┐│\n");
+		printf("┌────────────────────────────────┐\n");
+		printf("│┌──────────────────────────────┐│\n");
+		printf("││             注册             ││\n");
+		printf("│└──────────────────────────────┘│\n");
+		printf("│┌──────────────────────────────┐│\n");
 		printf("││                              ││\n");
-		printf("││   ┌──────────┐   ││\n");
-		printf("││   │                    │   ││\n");
-		printf("││   │帐号:               │   ││\n");
-		printf("││   │                    │   ││\n");
-		printf("││   │密码:               │   ││\n");
-		printf("││   │                    │   ││\n");
-		printf("││   └──────────┘   ││\n");
+		printf("││   ┌──────────────────────┐   ││\n");
+		printf("││   │                      │   ││\n");
+		printf("││   │帐号:                 │   ││\n");
+		printf("││   │                      │   ││\n");
+		printf("││   │密码:                 │   ││\n");
+		printf("││   │                      │   ││\n");
+		printf("││   └──────────────────────┘   ││\n");
 		printf("││                              ││\n");
-		printf("│└───────────────┘│\n");
-		printf("└─────────────────┘\n");
+		printf("│└──────────────────────────────┘│\n");
+		printf("└────────────────────────────────┘\n");
 		Position(15,9);
 	//scanf("%s",tempid);
 		i=0;
@@ -151,9 +151,9 @@ int Register()
 			if(strcmp(tempid,p->next->id)==0)
 			{
 				Position(1,9);
-				printf("├┴───────────────┴┤\n");
-				printf("│      [!]提示:无用户，请注册!     │\n");
-				printf("├┬───────────────┬┤\n");
+				printf("├┴──────────────────────────────┴┤\n");
+				printf("│     [!]提示:无用户，请注册!    │\n");
+				printf("├┬──────────────────────────────┬┤\n");
 				getch();
 				return 0;
 			}

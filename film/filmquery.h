@@ -36,23 +36,23 @@ film* FilmQuery(film *p)
 	{
 		line=4;
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│           查询影片信息           │\n");
-		printf("│─────────────────│\n");
+		printf("│──────────────────────────────────│\n");
 		printf("│           [1]-----片名           │\n");
 		printf("│           [2]-----评分           │\n");
 		printf("│           [3]-----片长           │\n");
 		printf("│           [4]-----票价           │\n");
 		printf("│           [0]-----取消           │\n");
-		printf("└─────────────────┘\n");
-		choose=Cursor(4,8,12,26,8,1);
+		printf("└──────────────────────────────────┘\n");
+		choose=Cursor(4,8,11,25,8,1);
 		system("cls");
 		switch(choose)
 		{
 			case 4 :
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│  片名:                           │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			Position(10,2);
 			i=0;
 			while((name=getch())!='\r')
@@ -84,9 +84,9 @@ film* FilmQuery(film *p)
 			if(!memcmp(tempname,p->filmname,namelen))
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│             影片信息             │\n");
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  %s",p->filmname);
 				len=strlen(p->filmname);
 				for(i = 0;i < 23-len;i++)
@@ -95,21 +95,21 @@ film* FilmQuery(film *p)
 				}
 				printf("%3.1lf评分  │\n",p->score);
 				printf("│  片长：%3.lf分钟         %6.2lf元  │\n",p->length,p->fare);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  %4d年%2d月%2d日                  │\n",p->premiere->next->year,p->premiere->next->month,p->premiere->next->day);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				line=12;
 				t=p->premiere->next;
 				while(t!=NULL)
 				{
 					Position(1,line);
 					printf("│  %2d:%2d-%2d:%2d                     │\n",t->openhour,t->openmin,t->closehour,t->closemin);
-					printf("│─────────────────│\n");
+					printf("│──────────────────────────────────│\n");
 					t=t->next;
 					line+=2;
 				}
 				printf("│                                  │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return p;
@@ -117,18 +117,18 @@ film* FilmQuery(film *p)
 			else
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│ [!]提示:无该影片记录,请输入数据! │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return NULL;
 			}
 			break;
 			case 5 :
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│  评分:                           │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			Position(10,2);
 			scanf("%lf", &tempscore);
 			while(p!=NULL&&p->score!=tempscore)
@@ -138,9 +138,9 @@ film* FilmQuery(film *p)
 			if(p->score==tempscore)
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│             影片信息             │\n");
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  %s",p->filmname);
 				len=strlen(p->filmname);
 				for(i = 0;i < 23-len;i++)
@@ -149,9 +149,9 @@ film* FilmQuery(film *p)
 				}
 				printf("%3.1lf评分  │\n",p->score);
 				printf("│  片长：%3.lf分钟         %6.2lf元  │\n",p->length,p->fare);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│                                  │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return p;
@@ -159,18 +159,18 @@ film* FilmQuery(film *p)
 			else
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│ [!]提示:无该影片记录,请输入数据! │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return NULL;
 			}
 			break;
 			case 6 :
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│  片长:                           │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			Position(10,2);
 			scanf("%lf", &templength);
 			while(p!=NULL&&p->length!=templength)
@@ -180,9 +180,9 @@ film* FilmQuery(film *p)
 			if(p->length==templength)
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│             影片信息             │\n");
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  %s",p->filmname);
 				len=strlen(p->filmname);
 				for(i = 0;i < 23-len;i++)
@@ -191,9 +191,9 @@ film* FilmQuery(film *p)
 				}
 				printf("%3.1lf评分  │\n",p->score);
 				printf("│  片长：%3.lf分钟         %6.2lf元  │\n",p->length,p->fare);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│                                  │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return p;
@@ -201,18 +201,18 @@ film* FilmQuery(film *p)
 			else
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│ [!]提示:无该影片记录,请输入数据! │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return NULL;
 			}
 			break;
 			case 7 :
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│  票价:                           │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 			Position(10,2);
 			scanf("%lf", &tempfare);
 			while(p!=NULL&&p->fare!=tempfare)
@@ -222,9 +222,9 @@ film* FilmQuery(film *p)
 			if(p->fare==tempfare)
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│             影片信息             │\n");
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│  %s",p->filmname);
 				len=strlen(p->filmname);
 				for(i = 0;i < 23-len;i++)
@@ -233,9 +233,9 @@ film* FilmQuery(film *p)
 				}
 				printf("%3.1lf评分  │\n",p->score);
 				printf("│  片长：%3.lf分钟         %6.2lf元  │\n",p->length,p->fare);
-				printf("│─────────────────│\n");
+				printf("│──────────────────────────────────│\n");
 				printf("│                                  │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return p;
@@ -243,9 +243,9 @@ film* FilmQuery(film *p)
 			else
 			{
 				Position(1,4);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│ [!]提示:无该影片记录,请输入数据! │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				getch();
 				system("cls");
 				return NULL;
@@ -259,19 +259,19 @@ film* FilmQuery(film *p)
 	else
 	{
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│  [!]提示:无影片数据,请输入数据!  │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		getch();
 		system("cls");
 		return NULL;
 	}
 	flag:
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│       [!]提示:查询完毕!          │\n");
 	printf("│       任意键返回主菜单...        │\n");
-	printf("└─────────────────┘\n");
+	printf("└──────────────────────────────────┘\n");
 	getch();
 	system("cls");
 	return NULL;

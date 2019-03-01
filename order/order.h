@@ -36,9 +36,9 @@ void Order()
 	q=p;
 	line=4;
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│          第一步:选择电影         │\n");
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	while(p!=NULL)
 	{
 		printf("│  %s",p->filmname);
@@ -49,12 +49,12 @@ void Order()
 		}
 		printf("%3.1lf评分  │\n",p->score);
 		printf("│  片长：%3.lf分钟         %6.2lf元  │\n",p->length,p->fare);
-		printf("│─────────────────│\n");
+		printf("│──────────────────────────────────│\n");
 		p=p->next;
 	}
 	printf("│                                  │\n");
-	printf("└─────────────────┘\n");
-	choosefilm=Cursor(4,3*n+1,3,35,0,3);
+	printf("└──────────────────────────────────┘\n");
+	choosefilm=Cursor(4,3*n+1,2,34,0,3);
 	if(choosefilm==0)
 	{
 		goto flagofexit;
@@ -69,9 +69,9 @@ void Order()
 	b=d;
 	line=9;
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│          第二步:选择场次         │\n");
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  %s",q->filmname);
 	gth=strlen(q->filmname);
 	for(i = 0;i < 23-gth;i++)
@@ -80,21 +80,21 @@ void Order()
 	}
 	printf("%3.1lf评分  │\n",q->score);
 	printf("│  片长：%3.lf分钟         %6.2lf元  │\n",q->length,q->fare);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  %4d年%2d月%2d日                  │\n",b->year,b->month,b->day);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	while(b!=NULL)
 	{
 		Position(1,line);
 		printf("│  %2d:%2d-%2d:%2d               %2d厅  │\n",b->openhour,b->openmin,b->closehour,b->closemin,b->hallnum);
-		printf("│─────────────────│\n");
+		printf("│──────────────────────────────────│\n");
 		b=b->next;
 		line+=2;
 		u++;
 	}
 	printf("│                                  │\n");
-	printf("└─────────────────┘\n");
-	choosedate=Cursor(9,2*u+7,3,35,0,2);
+	printf("└──────────────────────────────────┘\n");
+	choosedate=Cursor(9,2*u+7,2,34,0,2);
 	if(choosedate==0)
 	{
 		goto step1;
@@ -106,9 +106,9 @@ void Order()
 	/****************************************************/
 	step3:
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│          第三步:选择座位         │\n");
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  %s",q->filmname);
 	gth=strlen(q->filmname);
 	for(i = 0;i < 23-gth;i++)
@@ -117,32 +117,32 @@ void Order()
 	}
 	printf("%3.1lf评分  │\n",q->score);
 	printf("│  片长：%3.lf分钟         %6.2lf元  │\n",q->length,q->fare);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  %4d年%2d月%2d日                  │\n",d->year,d->month,d->day);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  %2d:%2d-%2d:%2d               %2d厅  │\n",d->openhour,d->openmin,d->closehour,d->closemin,d->hallnum);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│□可选  ");
 	SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
 	printf("■已选  ");
 	SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_INTENSITY );
 	printf("■已售            ");
 	SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE );
-	printf("│\n│─────────────────│\n");
-	printf("│    ┌─────────────┐│\n");
-	printf("│    │          银幕            ││\n");
-	printf("│    └─────────────┘│\n");
+	printf("│\n│──────────────────────────────────│\n");
+	printf("│┌────────────────────────────────┐│\n");
+	printf("││              银幕              ││\n");
+	printf("│└────────────────────────────────┘│\n");
 	printf("│                                  │\n");
-	printf("│┌ ┐                             │\n");
-	printf("││1│□□□□□□□□□□□□□□ │\n");
-	printf("││2│□□□□□□□□□□□□□□ │\n");
-	printf("││3│□□□□□□□□□□□□□□ │\n");
-	printf("││4│□□□□□□□□□□□□□□ │\n");
-	printf("││5│□□□□□□□□□□□□□□ │\n");
-	printf("││6│□□□□□□□□□□□□□□ │\n");
-	printf("│└ ┘                             │\n");
+	printf("│┌ ┐                               │\n");
+	printf("││1│ □□□□□□□□□□□□□□ ││\n");
+	printf("││2│ □□□□□□□□□□□□□□ ││\n");
+	printf("││3│ □□□□□□□□□□□□□□ ││\n");
+	printf("││4│ □□□□□□□□□□□□□□ ││\n");
+	printf("││5│ □□□□□□□□□□□□□□ ││\n");
+	printf("││6│ □□□□□□□□□□□□□□ ││\n");
+	printf("│└ ┘                               │\n");
 	printf("│                                  │\n");
-	printf("└─────────────────┘\n");
+	printf("└──────────────────────────────────┘\n");
 	if(flagoffilm==0)
 	{
 		itoa(d->year,stryear,10);
@@ -335,18 +335,18 @@ void Order()
 			if(seat[len-18][(row-8)/2]==0&&flagofseat==1)
 			{
 				Position(1,13);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│             一人一座!            │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				Sleep(200);
 				goto step3;
 			}
 			if(seat[len-18][(row-8)/2]==2&&(flagofseat==0||flagofseat==1))
 			{
 				Position(1,13);
-				printf("┌─────────────────┐\n");
+				printf("┌──────────────────────────────────┐\n");
 				printf("│             座位已售!            │\n");
-				printf("└─────────────────┘\n");
+				printf("└──────────────────────────────────┘\n");
 				Sleep(200);
 				goto step3;
 			}
@@ -359,9 +359,9 @@ void Order()
 	if(seat[len-18][(row-8)/2]==2)
 	{
 		Position(1,13);
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│             该座已售!            │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		Sleep(200);
 		goto step3;
 	}
@@ -374,13 +374,13 @@ void Order()
 	srand((unsigned)time(NULL)); /*随机种子*/
 	randnum=rand()%(10000000-999999+1)+999999;
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│          第四步:确认选择         │\n");
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│            选座票信息            │\n");
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  订单：                 %7d  │\n",randnum);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  片名:");
 	gth=strlen(q->filmname);
 	for(i = 0;i < 25-gth;i++)
@@ -388,21 +388,21 @@ void Order()
 		printf(" ");
 	}
 	printf("%s  │\n",q->filmname);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  片长：                 %3.lf分钟  │\n",q->length);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  日期:           %4d年%2d月%2d日  │\n",d->year,d->month,d->day);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  场次:              %2d:%2d-%2d:%2d  │\n",d->openhour,d->openmin,d->closehour,d->closemin);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  院厅:                     %2d厅  │\n",d->hallnum);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  座位:                 %2d排%2d座  │\n",len-18+1,(row-8)/2+1);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  小计:                 %6.2lf元  │\n",q->fare);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│            确认支付？            │\n");
-	printf("└─────────────────┘\n");
+	printf("└──────────────────────────────────┘\n");
 	while((ch=getch())!=0x0d)
 	{
 		if(ch==0x1b)
@@ -445,23 +445,23 @@ void Order()
 	Sleep(200);
 	if(flagofseat==1)
 	{
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│             交易成功!            │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 	}
 	else
 	{
 		if(flagofseat!=0)
 		{
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│             交易失败!            │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 		}
 		else
 		{
-			printf("┌─────────────────┐\n");
+			printf("┌──────────────────────────────────┐\n");
 			printf("│             欢迎使用!            │\n");
-			printf("└─────────────────┘\n");
+			printf("└──────────────────────────────────┘\n");
 		}
 	}
 	getch();

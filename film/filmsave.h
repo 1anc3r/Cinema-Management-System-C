@@ -29,16 +29,16 @@ film* FilmSave(film *p)
 	date *t;
 	line=5;
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│           保存影片信息           │\n");
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│                                  │\n");
 	printf("│           [1]-----追加           │\n");
 	printf("│           [2]-----覆盖           │\n");
 	printf("│           [0]-----取消           │\n");
 	printf("│                                  │\n");
-	printf("└─────────────────┘\n");
-	choose=Cursor(5,7,12,26,7,1);
+	printf("└──────────────────────────────────┘\n");
+	choose=Cursor(5,7,11,25,7,1);
 	switch(choose)
 	{
 		case 5 :
@@ -53,9 +53,9 @@ film* FilmSave(film *p)
 	if((fp=fopen("data/infofilm.txt",mod))==NULL)
 	{
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│       [!]提示:文件打开失败!      │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		getch();
 		exit(0);
 	}

@@ -17,16 +17,16 @@ int UserSave(user *p)
 	FILE *fp;
 	user *user=NULL;
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│           保存用户信息           │\n");
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│                                  │\n");
 	printf("│           [1]-----追加           │\n");
 	printf("│           [2]-----覆盖           │\n");
 	printf("│           [0]-----取消           │\n");
 	printf("│                                  │\n");
-	printf("└─────────────────┘\n");
-	choose=Cursor(5,7,12,26,7,1);
+	printf("└──────────────────────────────────┘\n");
+	choose=Cursor(5,7,11,25,7,1);
 	switch(choose)
 	{
 		case 5 :
@@ -41,9 +41,9 @@ int UserSave(user *p)
 	if((fp=fopen("data/infouser.txt",mod))==NULL)
 	{
 		system("cls");
-		printf("┌─────────────────┐\n");
+		printf("┌──────────────────────────────────┐\n");
 		printf("│       [!]提示:文件打开失败!      │\n");
-		printf("└─────────────────┘\n");
+		printf("└──────────────────────────────────┘\n");
 		getch();
 		exit(0);
 	}

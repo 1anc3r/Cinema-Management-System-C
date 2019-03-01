@@ -10,9 +10,9 @@ void HallView(film *f,date *d)
 	HANDLE hOut;							//控制台输出流句柄
 	hOut = GetStdHandle(STD_OUTPUT_HANDLE);	//获取句柄,改变颜色
 	system("cls");
-	printf("┌─────────────────┐\n");
+	printf("┌──────────────────────────────────┐\n");
 	printf("│           浏览影厅信息           │\n");
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  %s",f->filmname);
 	len=strlen(f->filmname);
 	for(i = 0;i < 23-len;i++)
@@ -21,32 +21,32 @@ void HallView(film *f,date *d)
 	}
 	printf("%3.1lf评分  │\n",f->score);
 	printf("│  片长：%3.lf分钟         %6.2lf元  │\n",f->length,f->fare);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  %4d年%2d月%2d日                  │\n",d->year,d->month,d->day);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│  %2d:%2d-%2d:%2d               %2d厅  │\n",d->openhour,d->openmin,d->closehour,d->closemin,d->hallnum);
-	printf("│─────────────────│\n");
+	printf("│──────────────────────────────────│\n");
 	printf("│□可选  ");
 	SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
 	printf("■已选  ");
 	SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_INTENSITY );
 	printf("■已售            ");
 	SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE );
-	printf("│\n│─────────────────│\n");
-	printf("│    ┌─────────────┐│\n");
-	printf("│    │          银幕            ││\n");
-	printf("│    └─────────────┘│\n");
+	printf("│\n│──────────────────────────────────│\n");
+	printf("│┌────────────────────────────────┐│\n");
+	printf("││              银幕              ││\n");
+	printf("│└────────────────────────────────┘│\n");
 	printf("│                                  │\n");
-	printf("│┌ ┐                             │\n");
-	printf("││1│□□□□□□□□□□□□□□ │\n");
-	printf("││2│□□□□□□□□□□□□□□ │\n");
-	printf("││3│□□□□□□□□□□□□□□ │\n");
-	printf("││4│□□□□□□□□□□□□□□ │\n");
-	printf("││5│□□□□□□□□□□□□□□ │\n");
-	printf("││6│□□□□□□□□□□□□□□ │\n");
-	printf("│└ ┘                             │\n");
+	printf("│┌ ┐                               │\n");
+	printf("││1│ □□□□□□□□□□□□□□ ││\n");
+	printf("││2│ □□□□□□□□□□□□□□ ││\n");
+	printf("││3│ □□□□□□□□□□□□□□ ││\n");
+	printf("││4│ □□□□□□□□□□□□□□ ││\n");
+	printf("││5│ □□□□□□□□□□□□□□ ││\n");
+	printf("││6│ □□□□□□□□□□□□□□ ││\n");
+	printf("│└ ┘                               │\n");
 	printf("│                                  │\n");
-	printf("└─────────────────┘\n");
+	printf("└──────────────────────────────────┘\n");
 	itoa(d->year,stryear,10);
 	itoa(d->month,strmonth,10);
 	itoa(d->day,strday,10);
